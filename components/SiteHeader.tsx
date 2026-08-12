@@ -1,0 +1,74 @@
+"use client";
+
+import Link from "next/link";
+import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
+
+type NavLink = { href: string; label: string };
+
+export default function SiteHeader({ links }: { links: NavLink[] }) {
+  const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
+
+  useEffect(() => {
+    document.documentElement.classList.toggle("nav-open", open);
+  }, [open]);
+
+  return (
+    <header className="site-header">
+      <div className="header-inner">
+        <Link href="/" className="brand" aria-label="Báez Tobar Abogados — ir al inicio">
+          <span className="brand-name" translate="no">BÁEZ TOBAR</span>
+          <span className="brand-description">Abogados</span>
+        </Link>
+
+        <nav
+          className={`main-navigation${open ? " main-navigation--open" : ""}`}
+          aria-label="Navegación principal"
+        >
+          {links.map(({ href, label }) => (
+            <Link
+              key={href}
+              href={href}
+              className="navigation-link"
+              aria-current={pathname === href ? "page" : undefined}
+            >
+              {label}
+            </Link>
+          ))}
+          <Link href="/contacto" className="header-action header-action--mobile">
+            Agendar consulta
+          </Link>
+        </nav>
+
+        <Link href="/contacto" className="header-action header-action--desktop">
+          Agendar consulta
+        </Link>
+
+        <button
+          type="button"
+          className="menu-toggle"
+          aria-label={open ? "Cerrar menú" : "Abrir menú"}
+          aria-expanded={open}
+          onClick={() => setOpen((value) => !value)}
+        >
+          <span />
+          <span />
+          <span />
+        </button>
+      </div>
+
+      <button
+        type="button"
+        className="nav-scrim"
+        aria-hidden="true"
+        tabIndex={-1}
+        onClick={() => setOpen(false)}
+      />
+    </header>
+  );
+}
