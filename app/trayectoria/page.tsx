@@ -102,7 +102,7 @@ export default function Page() {
       <section className="page-content">
         <h2>Qué puede encontrar en este acompañamiento.</h2>
         <p className="section-note">
-          Más allá de los cargos, esto es lo que la práctica de Nicolás Báez
+          Más allá de los cargos, esto es lo que la práctica de Nicolás Baez
           Tobar pone a disposición de cada cliente.
         </p>
         <div className="list-cards" style={{ marginTop: 40 }}>

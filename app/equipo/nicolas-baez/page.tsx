@@ -12,7 +12,7 @@ export default function Page() {
     <>
       <section className="page-hero">
         <p className="eyebrow">Fundador · Abogado principal</p>
-        <h1>Nicolás Báez Tobar</h1>
+        <h1>Nicolás Baez Tobar</h1>
         <p>Derecho público, litigio estratégico y gestión jurídica del Estado.</p>
       </section>
 
@@ -20,7 +20,7 @@ export default function Page() {
         <img
           style={{ width: "100%", maxHeight: 620, objectFit: "cover", objectPosition: "top" }}
           src="/images/nicolas-baez.jpg"
-          alt="Nicolás Báez Tobar"
+          alt="Nicolás Baez Tobar"
           width={502}
           height={620}
         />

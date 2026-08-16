@@ -21,8 +21,8 @@ export default function SiteHeader({ links }: { links: NavLink[] }) {
   return (
     <header className="site-header">
       <div className="header-inner">
-        <Link href="/" className="brand" aria-label="Báez Tobar Abogados — ir al inicio">
-          <span className="brand-name" translate="no">BÁEZ TOBAR</span>
+        <Link href="/" className="brand" aria-label="Baez Tobar Abogados — ir al inicio">
+          <span className="brand-name" translate="no">BAEZ TOBAR</span>
           <span className="brand-description">Abogados</span>
         </Link>
 
