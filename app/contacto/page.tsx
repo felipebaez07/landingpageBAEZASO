@@ -43,7 +43,7 @@ export default function Page() {
               </span>
               <span className="contact-channel-body">
                 <strong>WhatsApp</strong>
-                <span>318 694 1836 · respuesta directa</span>
+                <span>Respuesta directa</span>
               </span>
             </a>
 
