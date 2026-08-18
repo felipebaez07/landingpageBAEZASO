@@ -50,45 +50,47 @@ export default function EntityShowcase({ items }: { items: EntityShowcaseItem[] 
       onFocus={() => setPaused(true)}
       onBlur={() => setPaused(false)}
     >
-      <button
-        type="button"
-        className="entity-showcase-nav"
-        aria-label="Entidad anterior"
-        onClick={() => go(index - 1)}
-      >
-        ‹
-      </button>
+      <div className="entity-showcase-row">
+        <button
+          type="button"
+          className="entity-showcase-nav"
+          aria-label="Entidad anterior"
+          onClick={() => go(index - 1)}
+        >
+          ‹
+        </button>
 
-      <div
-        className="entity-showcase-card"
-        key={index}
-        role="group"
-        aria-roledescription="diapositiva"
-        aria-label={`${index + 1} de ${items.length}`}
-      >
-        <div className="entity-showcase-logo">
-          {current.logo ? (
-            <img src={current.logo} alt="" loading="lazy" />
-          ) : (
-            <span className="entity-showcase-fallback" aria-hidden="true">
-              {initials(current.name)}
-            </span>
-          )}
+        <div
+          className="entity-showcase-card"
+          key={index}
+          role="group"
+          aria-roledescription="diapositiva"
+          aria-label={`${index + 1} de ${items.length}`}
+        >
+          <div className="entity-showcase-logo">
+            {current.logo ? (
+              <img src={current.logo} alt="" loading="lazy" />
+            ) : (
+              <span className="entity-showcase-fallback" aria-hidden="true">
+                {initials(current.name)}
+              </span>
+            )}
+          </div>
+          <div className="entity-showcase-body">
+            <strong>{current.name}</strong>
+            <p>{current.context}</p>
+          </div>
         </div>
-        <div className="entity-showcase-body">
-          <strong>{current.name}</strong>
-          <p>{current.context}</p>
-        </div>
+
+        <button
+          type="button"
+          className="entity-showcase-nav"
+          aria-label="Entidad siguiente"
+          onClick={() => go(index + 1)}
+        >
+          ›
+        </button>
       </div>
-
-      <button
-        type="button"
-        className="entity-showcase-nav"
-        aria-label="Entidad siguiente"
-        onClick={() => go(index + 1)}
-      >
-        ›
-      </button>
 
       <div className="entity-showcase-dots" role="tablist" aria-label="Seleccionar entidad">
         {items.map((item, i) => (
