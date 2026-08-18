@@ -1,7 +1,8 @@
 import Link from "next/link";
+import EntityShowcase, { type EntityShowcaseItem } from "../../components/EntityShowcase";
 
 const stats: [string, string][] = [
-  ["340+", "procesos judiciales y constitucionales atendidos"],
+  ["340+", "procesos judiciales atendidos"],
   ["70 %", "tasa aproximada de éxito en asuntos concluidos"],
   ["143", "procesos asumidos en defensa directa de entidades públicas"],
   ["70+", "asuntos gestionados de forma simultánea"],
@@ -55,7 +56,7 @@ const entities: [string, string[]][] = [
   ],
   [
     "Educación superior",
-    ["Universidad de Ibagué", "Institución Universitaria de El Espinal"],
+    ["Institución Universitaria de El Espinal"],
   ],
   [
     "Sector privado · construcción, ingeniería e inversión",
@@ -74,6 +75,99 @@ const entities: [string, string[]][] = [
   ],
 ];
 
+const entityShowcase: EntityShowcaseItem[] = [
+  {
+    name: "Gobernación del Tolima",
+    context: "Asesoría externa en defensa judicial y consultoría jurídica territorial.",
+    logo: "/images/entities/gobernacion-tolima.svg",
+  },
+  {
+    name: "Alcaldía de Ibagué",
+    context: "Acompañamiento en procesos contencioso-administrativos y gestión territorial.",
+    logo: "/images/entities/alcaldia-ibague.svg",
+  },
+  {
+    name: "Alcaldía de El Guamo",
+    context: "Representación judicial y asesoría a la administración municipal.",
+    logo: "/images/entities/alcaldia-el-guamo.svg",
+  },
+  {
+    name: "Congreso de la República — Cámara de Representantes",
+    context: "Producción normativa y conceptos jurídicos para la actividad legislativa.",
+    logo: "/images/entities/camara-representantes.svg",
+  },
+  {
+    name: "Concejo Municipal de Ibagué",
+    context: "Elaboración y discusión de proyectos de acuerdo y control político.",
+    logo: "/images/entities/concejo-ibague.png",
+  },
+  {
+    name: "Concejo Municipal de El Espinal",
+    context: "Asesoría en producción normativa municipal y control político.",
+    logo: "/images/entities/concejo-el-espinal.jpg",
+  },
+  {
+    name: "Personería Municipal de Ibagué",
+    context: "Consultoría jurídica en el ejercicio del ministerio público.",
+    logo: "/images/entities/personeria-ibague.png",
+  },
+  {
+    name: "Contraloría Municipal de Ibagué",
+    context: "Conceptos y respuestas jurídicas ante el organismo de control fiscal.",
+    logo: "/images/entities/contraloria-ibague.png",
+  },
+  {
+    name: "Institución Universitaria de El Espinal",
+    context: "Docencia universitaria y dirección del Consultorio Jurídico.",
+    logo: "/images/entities/uniespinal.png",
+  },
+  {
+    name: "Construaliados S.A.S.",
+    context: "Asesoría legal y prevención de riesgos en proyectos de construcción.",
+    logo: "/images/entities/construaliados.webp",
+  },
+  {
+    name: "Construmédicos S.A.S.",
+    context: "Consultoría jurídica y contractual para proyectos de infraestructura.",
+  },
+  {
+    name: "Inversiones y Construcciones de Occidente S.A.S.",
+    context: "Acompañamiento legal en inversión y desarrollo de proyectos.",
+  },
+  {
+    name: "Construservicios B&H S.A.S.",
+    context: "Asesoría contractual y de cumplimiento normativo.",
+    logo: "/images/entities/construservicios-byh.webp",
+  },
+  {
+    name: "Concretos Ibagué S.A.S.",
+    context: "Consultoría jurídica en contratación y operación del negocio.",
+    logo: "/images/entities/concretos-ibague.png",
+  },
+  {
+    name: "Trefiaceros A&C S.A.S.",
+    context: "Acompañamiento legal en contratación y riesgos empresariales.",
+  },
+  {
+    name: "PRICA S.A.S.",
+    context: "Asesoría jurídica en proyectos de ingeniería y consultoría técnica.",
+  },
+  {
+    name: "Hacienda El Escobal",
+    context: "Asesoría legal patrimonial y contractual.",
+    logo: "/images/entities/hacienda-el-escobal.jpg",
+  },
+  {
+    name: "Golden Club",
+    context: "Consultoría jurídica y contractual del negocio.",
+    logo: "/images/entities/golden-club.jpg",
+  },
+  {
+    name: "Gestión Legal Empresarial S.A.S.",
+    context: "Coordinación de asesoría jurídica empresarial integral.",
+  },
+];
+
 export default function Page() {
   return (
     <>
@@ -81,7 +175,7 @@ export default function Page() {
         <p className="eyebrow">Experiencia</p>
         <h1>Trayectoria</h1>
         <p>
-          Una práctica construida desde 2018 mediante litigio, consultoría,
+          Una práctica construida desde 2021 mediante litigio, consultoría,
           producción normativa, gestión pública y docencia.
         </p>
       </section>
@@ -102,8 +196,8 @@ export default function Page() {
       <section className="page-content">
         <h2>Qué puede encontrar en este acompañamiento.</h2>
         <p className="section-note">
-          Más allá de los cargos, esto es lo que la práctica de Nicolás Baez
-          Tobar pone a disposición de cada cliente.
+          Más allá de los cargos, esto es lo que la práctica de la firma pone
+          a disposición de cada cliente.
         </p>
         <div className="list-cards" style={{ marginTop: 40 }}>
           {competencias.map(([t, d]) => (
@@ -122,7 +216,8 @@ export default function Page() {
           mediante contratos de prestación de servicios profesionales, con
           autonomía técnica y administrativa.
         </p>
-        <div className="entities">
+        <EntityShowcase items={entityShowcase} />
+        <div className="entities" style={{ marginTop: 56 }}>
           {entities.map(([group, items]) => (
             <div className="entity-group" key={group}>
               <h3>{group}</h3>
@@ -133,53 +228,6 @@ export default function Page() {
               </ul>
             </div>
           ))}
-        </div>
-      </section>
-
-      <section className="page-content grid-two">
-        <div>
-          <h2>Formación y docencia.</h2>
-          <ul className="plain-list">
-            <li>
-              <strong>Candidato a Magíster en Derecho y Gestión Urbanística</strong>{" "}
-              — Universidad del Rosario (en curso)
-            </li>
-            <li>
-              <strong>Especialista en Derecho Urbano</strong> — Universidad
-              del Rosario, 2026
-            </li>
-            <li>
-              <strong>Especialista en Derecho Administrativo</strong> —
-              Universidad de Ibagué, 2022
-            </li>
-            <li>
-              <strong>Abogado</strong> — Universidad de Ibagué, 2022
-            </li>
-          </ul>
-        </div>
-        <div>
-          <h3>Docencia e investigación</h3>
-          <p>
-            Docente catedrático e investigador en Uniespinal (2025 –
-            actualidad), donde ha dictado Derechos Humanos y Acciones
-            Constitucionales, y jefe del Área de Derecho Público del
-            Consultorio Jurídico de la Universidad de Ibagué.
-          </p>
-          <h3>Publicaciones</h3>
-          <ul className="plain-list">
-            <li>
-              La inteligencia artificial como potencial criterio auxiliar para
-              la solución de controversias (2024)
-            </li>
-            <li>
-              Responsabilidad del Estado por el hecho de las leyes
-              inconstitucionales en Colombia (2022)
-            </li>
-            <li>
-              Medios de control ante la jurisdicción de lo contencioso
-              administrativo (2021)
-            </li>
-          </ul>
         </div>
       </section>
 

@@ -24,9 +24,7 @@ export default function Page() {
           <h2>Solicite una asesoría</h2>
           <p>
             La consulta inicial permite conocer el asunto, identificar su
-            alcance y definir la forma de acompañamiento. Escriba directamente
-            a Nicolás Baez Tobar y él le confirmará la disponibilidad para
-            agendar una asesoría virtual o presencial en la oficina.
+            alcance y definir la forma de acompañamiento.
           </p>
 
           <div className="contact-channels">

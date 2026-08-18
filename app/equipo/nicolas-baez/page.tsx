@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 const stats: [string, string][] = [
-  ["2018", "en ejercicio profesional"],
+  ["2021", "en ejercicio profesional"],
   ["340+", "procesos atendidos"],
   ["70 %", "tasa aprox. de éxito"],
   ["143", "asuntos en defensa del Estado"],
@@ -28,7 +28,7 @@ export default function Page() {
           <h2>Perfil profesional</h2>
           <p>
             Abogado especialista en derecho administrativo y derecho urbano, y
-            candidato a Magíster en Derecho y Gestión Urbanística. Desde 2018
+            candidato a Magíster en Derecho y Gestión Urbanística. Desde 2021
             combina litigio, consultoría, producción normativa, gestión
             pública, docencia e investigación en empresas privadas, entidades
             territoriales, corporaciones públicas y el Congreso de la
@@ -70,6 +70,28 @@ export default function Page() {
             <li>Especialista en Derecho Urbano — Universidad del Rosario, 2026</li>
             <li>Especialista en Derecho Administrativo — Universidad de Ibagué, 2022</li>
             <li>Abogado — Universidad de Ibagué, 2022</li>
+          </ul>
+          <h3>Docencia e investigación</h3>
+          <p>
+            Docente catedrático e investigador en Uniespinal (2025 –
+            actualidad), donde ha dictado Derechos Humanos y Acciones
+            Constitucionales, y jefe del Área de Derecho Público del
+            Consultorio Jurídico de la Universidad de Ibagué.
+          </p>
+          <h3>Publicaciones</h3>
+          <ul className="plain-list">
+            <li>
+              La inteligencia artificial como potencial criterio auxiliar para
+              la solución de controversias (2024)
+            </li>
+            <li>
+              Responsabilidad del Estado por el hecho de las leyes
+              inconstitucionales en Colombia (2022)
+            </li>
+            <li>
+              Medios de control ante la jurisdicción de lo contencioso
+              administrativo (2021)
+            </li>
           </ul>
           <Link className="text-link dark" href="/trayectoria" style={{ marginTop: 12, display: "inline-block" }}>
             Ver trayectoria completa y entidades asesoradas →
