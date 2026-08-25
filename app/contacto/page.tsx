@@ -66,6 +66,29 @@ export default function Page() {
                 </span>
               </span>
             </div>
+
+            <div className="contact-channel contact-channel--stack" style={{ gridColumn: "1 / -1" }}>
+              <span className="contact-channel-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true">
+                  <path d="M12 21s-7-6.1-7-11.5A7 7 0 0 1 19 9.5C19 14.9 12 21 12 21Z" strokeLinejoin="round" />
+                  <circle cx="12" cy="9.5" r="2.4" />
+                </svg>
+              </span>
+              <span className="contact-channel-body">
+                <strong>Oficina</strong>
+                <span>Oficina X-3 · Edificio El Escorial, Ibagué</span>
+                <span className="contact-channel-actions">
+                  <a
+                    href="https://maps.app.goo.gl/q2F996xncYjwqCKF6"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="channel-action"
+                  >
+                    Ver en Google Maps
+                  </a>
+                </span>
+              </span>
+            </div>
           </div>
 
           <p style={{ marginTop: 28 }}>

@@ -27,12 +27,15 @@ export default function Page() {
         <div>
           <h2>Perfil profesional</h2>
           <p>
-            Abogado especialista en derecho administrativo y derecho urbano, y
-            candidato a Magíster en Derecho y Gestión Urbanística. Desde 2021
-            combina litigio, consultoría, producción normativa, gestión
-            pública, docencia e investigación en empresas privadas, entidades
-            territoriales, corporaciones públicas y el Congreso de la
-            República.
+            Abogado especialista en Derecho Administrativo y Derecho Urbano, y
+            candidato a Magíster en Derecho y Gestión Urbanística.
+          </p>
+          <p>
+            Con más de 6 años de experiencia, ejerce con especial énfasis en
+            el litigio estratégico, la defensa judicial y la consultoría
+            pública y privada — un enfoque que complementa con su labor como
+            columnista de opinión y docente, aportando una mirada actualizada
+            y rigurosa a cada asunto que asume.
           </p>
           <p>
             Ha intervenido en más de 340 procesos judiciales y
