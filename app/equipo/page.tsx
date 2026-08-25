@@ -8,7 +8,7 @@ const team: {
   href: string;
 }[] = [
   {
-    photo: "/images/nicolas-baez.jpg",
+    photo: "/images/team/nicolas-baez.jpg",
     name: "Nicolás Baez Tobar",
     role: "Fundador · Abogado principal",
     blurb:
@@ -22,6 +22,14 @@ const team: {
     blurb:
       "Especialista en contratación estatal y en gobierno y gestión para el desarrollo regional y municipal, con más de 6 años de experiencia en asesoría jurídica, representación judicial y consultoría estratégica.",
     href: "/equipo/ivan-pabon",
+  },
+  {
+    photo: "/images/team/sebastian-gongora.jpg",
+    name: "Sebastián Góngora Romero",
+    role: "Abogado",
+    blurb:
+      "Especialista en Contratación Estatal, con experiencia en procesos ejecutivos, recuperación de cartera y propiedad horizontal — más de 20 procesos ejecutivos gestionados entre estructuración, medidas cautelares y acuerdos de pago.",
+    href: "/equipo/sebastian-gongora",
   },
 ];
 

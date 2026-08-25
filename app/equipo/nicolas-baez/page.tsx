@@ -19,7 +19,7 @@ export default function Page() {
       <section className="page-content grid-two">
         <img
           style={{ width: "100%", maxHeight: 620, objectFit: "cover", objectPosition: "top" }}
-          src="/images/nicolas-baez.jpg"
+          src="/images/team/nicolas-baez.jpg"
           alt="Nicolás Baez Tobar"
           width={502}
           height={620}
