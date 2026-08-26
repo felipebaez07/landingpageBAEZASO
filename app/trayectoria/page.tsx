@@ -1,86 +1,64 @@
 import Link from "next/link";
+import { whatsappHref } from "../../lib/whatsapp";
 
-const team: {
-  photo: string;
-  photoPosition?: string;
-  name: string;
-  role: string;
-  stat: string;
-  statLabel: string;
-  blurb: string;
-  href: string;
-}[] = [
-  {
-    photo: "/images/team/nicolas-baez.jpg",
-    photoPosition: "center 34%",
-    name: "Nicolás Baez Tobar",
-    role: "Fundador · Abogado principal",
-    stat: "340+",
-    statLabel: "procesos judiciales atendidos desde 2021",
-    blurb:
-      "Defensa judicial del Estado, derecho administrativo, urbano y electoral, con litigio estratégico y consultoría pública y privada.",
-    href: "/equipo/nicolas-baez",
-  },
-  {
-    photo: "/images/team/ivan-pabon.jpg",
-    name: "Iván Felipe Pabón Rocha",
-    role: "Asociado · Abogado de la firma",
-    stat: "6+",
-    statLabel: "años de experiencia profesional",
-    blurb:
-      "Contratación estatal, gobierno y gestión para el desarrollo regional y municipal, asesoría jurídica y consultoría estratégica.",
-    href: "/equipo/ivan-pabon",
-  },
-  {
-    photo: "/images/team/sebastian-gongora.jpg",
-    name: "Sebastián Góngora Romero",
-    role: "Asociado · Abogado de la firma",
-    stat: "120+",
-    statLabel: "procesos ejecutivos gestionados",
-    blurb:
-      "Contratación estatal, procesos ejecutivos, recuperación de cartera y propiedad horizontal.",
-    href: "/equipo/sebastian-gongora",
-  },
+const stats: [string, string][] = [
+  ["340+", "procesos judiciales atendidos"],
+  ["70 %", "tasa aproximada de éxito en asuntos concluidos"],
+  ["143", "procesos asumidos en defensa directa de entidades públicas"],
+  ["70+", "asuntos gestionados de forma simultánea"],
+  ["100+", "acciones constitucionales"],
+  ["100+", "procesos contencioso-administrativos"],
+  ["14", "proyectos de acuerdo elaborados o discutidos"],
+  ["3–4", "productos normativos y conceptos al mes"],
 ];
 
 export default function Page() {
   return (
     <>
       <section className="page-hero">
-        <p className="eyebrow">Nuestro equipo</p>
+        <p className="eyebrow">Cifras y resultados</p>
         <h1>Trayectoria</h1>
         <p>
-          La experiencia combinada de los abogados que conforman la firma.
+          Una práctica construida desde 2021 mediante litigio, consultoría,
+          producción normativa, gestión pública y docencia.
         </p>
       </section>
 
-      <section className="page-content">
-        <div className="team-grid">
-          {team.map((member) => (
-            <article className="team-card" key={member.href}>
-              <div className="team-card-photo">
-                <img
-                  src={member.photo}
-                  alt={member.name}
-                  loading="lazy"
-                  style={member.photoPosition ? { objectPosition: member.photoPosition } : undefined}
-                />
-              </div>
-              <div className="team-card-body">
-                <p className="eyebrow blue">{member.role}</p>
-                <h2>{member.name}</h2>
-                <div className="stat-highlight">
-                  <strong>{member.stat}</strong>
-                  <span>{member.statLabel}</span>
-                </div>
-                <p>{member.blurb}</p>
-                <Link className="text-link dark" href={member.href}>
-                  Ver perfil completo →
-                </Link>
-              </div>
-            </article>
+      <section className="section practice">
+        <p className="eyebrow">Resultados de trayectoria</p>
+        <h2>Cifras que respaldan el criterio.</h2>
+        <div className="stats-grid">
+          {stats.map(([n, l]) => (
+            <div className="stat" key={l}>
+              <strong>{n}</strong>
+              <span>{l}</span>
+            </div>
           ))}
         </div>
+      </section>
+
+      <section className="page-content">
+        <h2>Un equipo que respalda cada cifra.</h2>
+        <p className="section-note">
+          Estos resultados son el trabajo conjunto de los abogados que
+          conforman la firma, cada uno con su propia especialidad.
+        </p>
+        <Link className="text-link dark" href="/equipo" style={{ marginTop: 24, display: "inline-block" }}>
+          Conocer al equipo →
+        </Link>
+      </section>
+
+      <section className="cta">
+        <p className="eyebrow">Hablemos de su caso</p>
+        <h2>Lleve este criterio a su asunto.</h2>
+        <a
+          className="button gold"
+          href={whatsappHref("Hola, quisiera agendar una consulta jurídica con Baez Tobar Abogados.")}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Agendar una consulta
+        </a>
       </section>
     </>
   );
