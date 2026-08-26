@@ -4,7 +4,7 @@ export default function Page() {
   return (
     <>
       <section className="page-hero">
-        <p className="eyebrow">Abogado</p>
+        <p className="eyebrow">Asociado · Abogado de la firma</p>
         <h1>Iván Felipe Pabón Rocha</h1>
         <p>Contratación estatal, gestión pública y consultoría estratégica.</p>
       </section>

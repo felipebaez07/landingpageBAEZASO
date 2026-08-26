@@ -4,7 +4,7 @@ export default function Page() {
   return (
     <>
       <section className="page-hero">
-        <p className="eyebrow">Abogado</p>
+        <p className="eyebrow">Asociado · Abogado de la firma</p>
         <h1>Sebastián Góngora Romero</h1>
         <p>Contratación estatal, litigio ejecutivo, recuperación de cartera y propiedad horizontal.</p>
       </section>
@@ -28,7 +28,7 @@ export default function Page() {
           <p>
             Su práctica se concentra en contratación estatal, procesos
             ejecutivos y recuperación de cartera, con experiencia en la
-            representación y gestión de más de 20 procesos ejecutivos —desde
+            representación y gestión de más de 120 procesos ejecutivos —desde
             la estructuración de demandas y solicitud de medidas cautelares
             hasta la negociación de obligaciones y acuerdos de pago.
           </p>
@@ -54,7 +54,7 @@ export default function Page() {
           <h3>Experiencia destacada</h3>
           <ul className="plain-list">
             <li>
-              <strong>20+ procesos</strong> — Representación en procesos
+              <strong>120+ procesos</strong> — Representación en procesos
               ejecutivos y recuperación de cartera.
             </li>
             <li>

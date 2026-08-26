@@ -2,6 +2,7 @@ import Link from "next/link";
 
 const team: {
   photo: string;
+  photoPosition?: string;
   name: string;
   role: string;
   blurb: string;
@@ -9,6 +10,7 @@ const team: {
 }[] = [
   {
     photo: "/images/team/nicolas-baez.jpg",
+    photoPosition: "center 12%",
     name: "Nicolás Baez Tobar",
     role: "Fundador · Abogado principal",
     blurb:
@@ -18,7 +20,7 @@ const team: {
   {
     photo: "/images/team/ivan-pabon.jpg",
     name: "Iván Felipe Pabón Rocha",
-    role: "Abogado",
+    role: "Asociado · Abogado de la firma",
     blurb:
       "Especialista en contratación estatal y en gobierno y gestión para el desarrollo regional y municipal, con más de 6 años de experiencia en asesoría jurídica, representación judicial y consultoría estratégica.",
     href: "/equipo/ivan-pabon",
@@ -26,9 +28,9 @@ const team: {
   {
     photo: "/images/team/sebastian-gongora.jpg",
     name: "Sebastián Góngora Romero",
-    role: "Abogado",
+    role: "Asociado · Abogado de la firma",
     blurb:
-      "Especialista en Contratación Estatal, con experiencia en procesos ejecutivos, recuperación de cartera y propiedad horizontal — más de 20 procesos ejecutivos gestionados entre estructuración, medidas cautelares y acuerdos de pago.",
+      "Especialista en Contratación Estatal, con experiencia en procesos ejecutivos, recuperación de cartera y propiedad horizontal — más de 120 procesos ejecutivos gestionados entre estructuración, medidas cautelares y acuerdos de pago.",
     href: "/equipo/sebastian-gongora",
   },
 ];
@@ -47,7 +49,12 @@ export default function Page() {
           {team.map((member) => (
             <article className="team-card" key={member.href}>
               <div className="team-card-photo">
-                <img src={member.photo} alt={member.name} loading="lazy" />
+                <img
+                  src={member.photo}
+                  alt={member.name}
+                  loading="lazy"
+                  style={member.photoPosition ? { objectPosition: member.photoPosition } : undefined}
+                />
               </div>
               <div className="team-card-body">
                 <p className="eyebrow blue">{member.role}</p>
