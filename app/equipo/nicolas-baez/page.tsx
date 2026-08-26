@@ -2,9 +2,14 @@ import Link from "next/link";
 
 const stats: [string, string][] = [
   ["2021", "en ejercicio profesional"],
-  ["340+", "procesos atendidos"],
-  ["70 %", "tasa aprox. de éxito"],
-  ["143", "asuntos en defensa del Estado"],
+  ["340+", "procesos judiciales atendidos"],
+  ["70 %", "tasa aproximada de éxito en asuntos concluidos"],
+  ["143", "procesos asumidos en defensa directa de entidades públicas"],
+  ["70+", "asuntos gestionados de forma simultánea"],
+  ["100+", "acciones constitucionales"],
+  ["100+", "procesos contencioso-administrativos"],
+  ["14", "proyectos de acuerdo elaborados o discutidos"],
+  ["3–4", "productos normativos y conceptos al mes"],
 ];
 
 export default function Page() {
@@ -27,7 +32,7 @@ export default function Page() {
         <div>
           <h2>Perfil profesional</h2>
           <p>
-            Abogado especialista en Derecho Administrativo y Derecho Urbano, y
+            Abogado especialista en Derecho Administrativo y Derecho Urbano,
             candidato a Magíster en Derecho y Gestión Urbanística.
           </p>
           <p>
@@ -96,14 +101,13 @@ export default function Page() {
               administrativo (2021)
             </li>
           </ul>
-          <div style={{ marginTop: 12, display: "flex", gap: 24, flexWrap: "wrap" }}>
-            <Link className="text-link dark" href="/trayectoria">
-              Ver trayectoria completa →
-            </Link>
-            <Link className="text-link dark" href="/experiencia">
-              Ver entidades asesoradas →
-            </Link>
-          </div>
+          <Link
+            className="text-link dark"
+            href="/experiencia"
+            style={{ marginTop: 12, display: "inline-block" }}
+          >
+            Ver entidades asesoradas →
+          </Link>
         </div>
       </section>
     </>

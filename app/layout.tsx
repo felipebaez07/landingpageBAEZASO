@@ -117,6 +117,12 @@ export default function RootLayout({
               © {new Date().getFullYear()} Baez Tobar Abogados. Todos los
               derechos reservados.
             </p>
+            <p className="footer-credit">
+              Desarrollado por Felipe Baez Tobar ·{" "}
+              <a href="mailto:felipebaez7tobar@gmail.com">felipebaez7tobar@gmail.com</a> ·{" "}
+              <a href="mailto:felipe.baez@hytrex.co">felipe.baez@hytrex.co</a> ·{" "}
+              <a href="tel:+573022467449">302 246 7449</a>
+            </p>
           </div>
         </footer>
       </body>
