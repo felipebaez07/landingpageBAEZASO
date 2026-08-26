@@ -10,7 +10,7 @@ const team: {
 }[] = [
   {
     photo: "/images/team/nicolas-baez.jpg",
-    photoPosition: "center 24%",
+    photoPosition: "center 34%",
     name: "Nicolás Baez Tobar",
     role: "Fundador · Abogado principal",
     blurb:
