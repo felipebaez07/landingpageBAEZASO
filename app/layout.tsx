@@ -6,6 +6,7 @@ import MotionObserver from "../components/MotionObserver";
 import SiteHeader from "../components/SiteHeader";
 import AccessibilityWidget from "../components/AccessibilityWidget";
 import ContactFloat from "../components/ContactFloat";
+import { WHATSAPP_NUMBER, whatsappHref } from "../lib/whatsapp";
 
 const THEME_INIT_SCRIPT = `(function(){try{var t=localStorage.getItem("bt-theme");if(t==="light"||t==="dark"){document.documentElement.setAttribute("data-theme",t)}var s=localStorage.getItem("bt-text-scale");if(s){document.documentElement.style.fontSize=s+"%"}}catch(e){}})();`;
 
@@ -45,6 +46,7 @@ const links = [
   { href: "/firma", label: "La firma" },
   { href: "/areas-de-practica", label: "Áreas de práctica" },
   { href: "/trayectoria", label: "Trayectoria" },
+  { href: "/experiencia", label: "Experiencia" },
   { href: "/equipo", label: "Equipo" },
   { href: "/contacto", label: "Contacto" },
 ];
@@ -95,13 +97,18 @@ export default function RootLayout({
 
             <div className="footer-contact">
               <span className="footer-nav-title">Contacto</span>
-              <a href="https://wa.me/573186941836" target="_blank" rel="noopener noreferrer">
+              <a href={`https://wa.me/${WHATSAPP_NUMBER}`} target="_blank" rel="noopener noreferrer">
                 WhatsApp: 318 694 1836
               </a>
               <a href="mailto:baezcorporativo@gmail.com">baezcorporativo@gmail.com</a>
-              <Link href="/contacto" className="text-link">
+              <a
+                href={whatsappHref("Hola, quisiera agendar una consulta jurídica con Baez Tobar Abogados.")}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-link"
+              >
                 Agendar consulta →
-              </Link>
+              </a>
             </div>
           </div>
 

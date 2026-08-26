@@ -96,9 +96,14 @@ export default function Page() {
               administrativo (2021)
             </li>
           </ul>
-          <Link className="text-link dark" href="/trayectoria" style={{ marginTop: 12, display: "inline-block" }}>
-            Ver trayectoria completa y entidades asesoradas →
-          </Link>
+          <div style={{ marginTop: 12, display: "flex", gap: 24, flexWrap: "wrap" }}>
+            <Link className="text-link dark" href="/trayectoria">
+              Ver trayectoria completa →
+            </Link>
+            <Link className="text-link dark" href="/experiencia">
+              Ver entidades asesoradas →
+            </Link>
+          </div>
         </div>
       </section>
     </>

@@ -3,8 +3,13 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
+import { whatsappHref } from "../lib/whatsapp";
 
 type NavLink = { href: string; label: string };
+
+const AGENDAR_HREF = whatsappHref(
+  "Hola, quisiera agendar una consulta jurídica con Baez Tobar Abogados."
+);
 
 export default function SiteHeader({ links }: { links: NavLink[] }) {
   const [open, setOpen] = useState(false);
@@ -43,14 +48,24 @@ export default function SiteHeader({ links }: { links: NavLink[] }) {
               {label}
             </Link>
           ))}
-          <Link href="/contacto" className="header-action header-action--mobile">
+          <a
+            href={AGENDAR_HREF}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="header-action header-action--mobile"
+          >
             Agendar consulta
-          </Link>
+          </a>
         </nav>
 
-        <Link href="/contacto" className="header-action header-action--desktop">
+        <a
+          href={AGENDAR_HREF}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="header-action header-action--desktop"
+        >
           Agendar consulta
-        </Link>
+        </a>
 
         <button
           type="button"

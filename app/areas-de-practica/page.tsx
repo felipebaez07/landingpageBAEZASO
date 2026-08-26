@@ -21,7 +21,7 @@ const data: [string, string][] = [
   ],
   [
     "Derecho civil y contractual",
-    "Contratos, obligaciones, responsabilidad civil, controversias patrimoniales y prevención de conflictos.",
+    "Contratos, obligaciones, responsabilidad civil, procesos ejecutivos, controversias patrimoniales y prevención de conflictos.",
   ],
   [
     "Producción normativa y control político",
